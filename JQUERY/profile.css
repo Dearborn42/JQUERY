@@ -1,0 +1,68 @@
+.container{
+    width: 60vw;
+    height: 90vh;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    background-color: aliceblue;
+}
+
+.profile-pic{
+    height: 90%;
+    width: 37.5vw;
+    background-image: url("./profile.jpg");
+    background-size: cover;
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.right-box{
+    height:90%;
+    width: 20vw;
+    margin-top: 3%;
+    margin-right: auto;
+    margin-left: auto;
+    display: none;
+}
+
+.title, .position, .desc, .info{
+    width: 20vw;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.title{
+    height: 20%;
+}
+
+.position{
+    height: 10%;
+}
+
+.desc{
+    height: 30%;
+}
+
+.info{
+    height: 30%;
+}
+
+.information-sub{
+    list-style: none;
+}
+
+
+.name-sub, .hobbies-sub, .about-sub, .information-sub{
+    display: none;
+}
+
+.name, .hobbies, .about, .information{
+    display: none;
+    color:teal;
+    text-decoration: underline;
+}
