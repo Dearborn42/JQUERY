@@ -6,4 +6,11 @@ $(function () {
     var pause = animateSpeed + 50;
     var currentSlide = 1;
     var $slideContainer=$('.slides')
+    var $slides = $('.slide');
+    var interval;
+    function startSlide() {
+        interval = setInterval(function () {
+            $slideContainer.animate({'margin-left':'-='+width}, animateSpeed)
+        }, animateSpeed);
+    }
 })
