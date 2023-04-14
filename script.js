@@ -2,15 +2,18 @@
 
 $(function () {
     var width = 720;
-    var animateSpeed = 2000;
-    var pause = 100;
+    var pause = 1000;
+    var animateSpeed = 2500;
     var currentSlide = 1;
     var $slideContainer=$('.slides')
     var $slides = $('.slide');
+    var dbclick = true;
     var interval;
     function startSlide() {
+        if(dbclick == true) animateSpeed = 250;
+        else animateSpeed = 5000;
         interval = setInterval(function () {
-            $slideContainer.animate({'margin-left':'-='+width}, 100, 
+            $slideContainer.animate({'margin-left':'-='+width}, animateSpeed, 
             function(){
                 currentSlide++;
                 if (currentSlide === $slides.length){
@@ -22,10 +25,13 @@ $(function () {
     }
 
     function pauseSlider() {
-        clearInterval(interval);
+        if(dbclick == true) animateSpeed = 5000;
+        else animateSpeed = 250;
     }
 
     startSlide();
+    
+    $slideContainer.on('dblclick', ()=>{dbclick = !dbclick; clearInterval(interval)})
 
     $slideContainer.on('mouseenter', pauseSlider).on('mouseleave', startSlide);
 })
