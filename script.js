@@ -9,6 +9,7 @@ $(function () {
     var $slides = $('.slide');
     var dbclick = true;
     var interval;
+    
     function startSlide() {
         if(dbclick == true) animateSpeed = 250;
         else animateSpeed = 5000;
